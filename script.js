@@ -154,7 +154,7 @@ function spawnGroups(amount) {
 function factory(repeatNo) {
     for(let i=0; i<CONFIG.objectsAmount; i++) {
         const newCube = new THREE.Mesh(
-            new THREE.BoxGeometry(1, 1, 1),
+            new THREE.SphereGeometry(0.7, 16, 16),
             new THREE.MeshBasicMaterial({color: `hsl(${LILCONFIG.colorsHue[`bar${i+1}`].hue}, ${CONFIG.defaultBaseColorSaturation + (5 * repeatNo)}%, ${CONFIG.defaultBaseColorLightness + (5 * repeatNo)}%)`})
         );
         newCube.position.x = posObj.xPos[(i) % posObj.xPos.length] / 2 ;
